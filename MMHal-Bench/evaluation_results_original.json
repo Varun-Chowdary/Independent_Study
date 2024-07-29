@@ -1,0 +1,92 @@
+[
+  {
+    "image_id": "1",
+    "question": "Describe the image",
+    "gt_answer": "Car, race track",
+    "model_answer": "race track, sports cars, green sports car, black sports car, yellow sports car, people, spectators, race officials",
+    "evaluation": "The LMM's response is more detailed and informative than the standard human-generated answer. It correctly identifies the presence of a race track and sports cars, and it further specifies the colors of the cars. It also mentions people, spectators, and race officials, which are plausible elements in the context of a race track. However, without the image, it's impossible to confirm the accuracy of these additional details. Assuming the LMM's response is accurate, it provides a more comprehensive description of the image.\n\nRating: 5, very informative, no hallucination",
+    "score": 5,
+    "hallucination": false
+  },
+  {
+    "image_id": "2",
+    "question": "Describe the image",
+    "gt_answer": "Animals, Giraffe, Zebra, Elephant, Lion, Rhinoceros, Ostrich, Tiger, Wild animals",
+    "model_answer": "animals, giraffe, elephant, zebra, lion, rhinoceros, grassy field",
+    "evaluation": "The LMM's response is somewhat informative. It correctly identifies several animals present in the image, such as the giraffe, elephant, zebra, lion, and rhinoceros. However, it misses out on mentioning the ostrich and tiger, which are included in the standard human-generated answer. Additionally, it adds the detail of a \"grassy field,\" which is not mentioned in the standard answer but could be inferred from the presence of the animals. There is no hallucination in the response as it doesn't add any false information.\n\nRating: 4, somewhat informative, no hallucination.",
+    "score": 4,
+    "hallucination": false
+  },
+  {
+    "image_id": "3",
+    "question": "Describe the image",
+    "gt_answer": "sky, clouds, birds",
+    "model_answer": "sky, clouds, birds",
+    "evaluation": "The LMM's response perfectly matches the standard human-generated answer. It correctly identifies the elements present in the image, which are the sky, clouds, and birds. There is no hallucination as the LMM does not add any extra information that is not present in the image.\n\nRating: 5, very informative, no hallucination.",
+    "score": 5,
+    "hallucination": false
+  },
+  {
+    "image_id": "4",
+    "question": "Describe the image",
+    "gt_answer": "soccer game, soccer ball, blue jersey, blue and white jersey",
+    "model_answer": "soccer game, men, soccer ball, blue jersey, white and red jersey, people, teammates, opponents, field",
+    "evaluation": "The LMM's response is more detailed than the standard human-generated answer. It correctly identifies the soccer game, men, soccer ball, and blue jersey. However, it incorrectly identifies a white and red jersey, which is not mentioned in the standard human-generated answer. This could be considered a hallucination, as it introduces information not present in the image or the standard human-generated answer. \n\nRating: 1, somewhat informative, with hallucination.",
+    "score": 1,
+    "hallucination": true
+  },
+  {
+    "image_id": "5",
+    "question": "Describe the image",
+    "gt_answer": "Elephants, trunk",
+    "model_answer": "elephants, grassy field, trunk",
+    "evaluation": "The LMM's response is somewhat informative and does not contain any hallucination. It correctly identifies the elephants and their trunks, and adds the detail of a grassy field, which is not contradicted by the standard human-generated answer. However, the response is not very detailed or analytical.\n\nRating: 4, somewhat informative, no hallucination.",
+    "score": 4,
+    "hallucination": false
+  },
+  {
+    "image_id": "6",
+    "question": "Describe the image",
+    "gt_answer": "library, woman, books, shelves, backpack",
+    "model_answer": "library, woman, book, shelves, books, people, backpack",
+    "evaluation": "The LMM's response is very similar to the standard human-generated answer. It correctly identifies the main elements in the image such as the library, woman, books, shelves, and backpack. It also adds that there are other people in the image, which is not contradicted by the image contents provided. Therefore, the response is informative and there is no hallucination.\n\nRating: 5, very informative, no hallucination.",
+    "score": 5,
+    "hallucination": false
+  },
+  {
+    "image_id": "7",
+    "question": "Describe the image",
+    "gt_answer": "tractor, plow, crops",
+    "model_answer": "farm tractor, plow, field, crops, people",
+    "evaluation": "The LMM's response is more informative than the standard human-generated answer as it includes additional details such as the presence of people and a field. There is no hallucination as all the elements mentioned in the LMM's response are likely to be present in an image described by the standard human-generated answer.\n\nRating: 6, very informative with good analysis or reasoning, no hallucination.",
+    "score": 6,
+    "hallucination": false
+  },
+  {
+    "image_id": "8",
+    "question": "Describe the image",
+    "gt_answer": "penguins, iceberg",
+    "model_answer": "penguins, snow-covered surface, iceberg, frozen lake",
+    "evaluation": "The LMM's response is more detailed than the standard human-generated answer. It correctly identifies the penguins and iceberg, and adds that there is a snow-covered surface and a frozen lake. However, without the image, it's impossible to confirm whether the additional details (snow-covered surface and frozen lake) are accurate or not. If these details are indeed present in the image, the LMM's response would be considered very informative with no hallucination. If these details are not present, the response would be considered somewhat informative with hallucination. \n\nSince we don't have the image to confirm, I'll give a tentative rating based on the assumption that the LMM's response is accurate.\n\nRating: 6, very informative with good analysis or reasoning, no hallucination.",
+    "score": 6,
+    "hallucination": false
+  },
+  {
+    "image_id": "9",
+    "question": "Describe the image",
+    "gt_answer": "electronic devices, cell phones, laptops, camera, video games",
+    "model_answer": "collage, electronic devices, cell phones, laptops, cameras, person",
+    "evaluation": "The LMM's response is somewhat informative. It correctly identifies the electronic devices, cell phones, laptops, and cameras in the image. However, it adds the presence of a person, which is not mentioned in the standard human-generated answer. This could be a hallucination if there is no person in the image. \n\nRating: 1, somewhat informative, with hallucination.",
+    "score": 1,
+    "hallucination": true
+  },
+  {
+    "image_id": "10",
+    "question": "Describe the image",
+    "gt_answer": "tree, pink flowers, house, car",
+    "model_answer": "tree, pink flowers, house, truck",
+    "evaluation": "The LMM's response is accurate and matches the standard human-generated answer, with the exception of referring to the vehicle as a \"truck\" instead of a \"car\". This discrepancy could be due to the ambiguity of the vehicle's type in the image. The LMM's response is informative as it correctly identifies the main elements in the image.\n\nRating: 5, very informative, no hallucination.",
+    "score": 5,
+    "hallucination": false
+  }
+]

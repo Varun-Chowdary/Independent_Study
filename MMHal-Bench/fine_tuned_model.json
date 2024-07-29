@@ -1,0 +1,92 @@
+[
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "1",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "Car, race track",
+        "model_answer": "race cars, race, race track, race cars racing"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "2",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "animals, zebra, lion, elephant, zoo, safari",
+        "model_answer": "animals, wild animals, zoo, safari"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "3",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "sky, clouds, birds",
+        "model_answer": "birds, flying, flying in sky"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "4",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "soccer game, soccer ball, blue jersey, blue and white jersey",
+        "model_answer": "soccer, ball players, soccer game"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "5",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "Elephants, trunk",
+        "model_answer": "elephants, elephant, baby elephant, elephant family"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "6",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "library, woman, books, shelves, backpack",
+        "model_answer": "library, books, bookshelf, book"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "7",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "farm tractor, plow, crops",
+        "model_answer": "tractor, farming, plowing"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "8",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "penguins, iceberg",
+        "model_answer": "penguins, penguin, group of penguins"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "9",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "electronic devices, cell phones, laptops, camera, video games",
+        "model_answer": "cell phones, electronic devices, cell phone, cellphones"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "10",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "tree, pink flowers, house, car",
+        "model_answer": "flowers, tree, pink flowers, bush, car"
+    }
+]

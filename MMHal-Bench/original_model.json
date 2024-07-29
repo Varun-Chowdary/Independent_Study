@@ -1,0 +1,92 @@
+[
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "1",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "Car, race track",
+        "model_answer": "race track, sports cars, green sports car, black sports car, yellow sports car, people, spectators, race officials"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "2",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "Animals, Giraffe, Zebra, Elephant, Lion, Rhinoceros, Ostrich, Tiger, Wild animals",
+        "model_answer": "animals, giraffe, elephant, zebra, lion, rhinoceros, grassy field"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "3",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "sky, clouds, birds",
+        "model_answer": "sky, clouds, birds"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "4",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "soccer game, soccer ball, blue jersey, blue and white jersey",
+        "model_answer": "soccer game, men, soccer ball, blue jersey, white and red jersey, people, teammates, opponents, field"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "5",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "Elephants, trunk",
+        "model_answer": "elephants, grassy field, trunk"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "6",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "library, woman, books, shelves, backpack",
+        "model_answer": "library, woman, book, shelves, books, people, backpack"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "7",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "tractor, plow, crops",
+        "model_answer": "farm tractor, plow, field, crops, people"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "8",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "penguins, iceberg",
+        "model_answer": "penguins, snow-covered surface, iceberg, frozen lake"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "9",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "electronic devices, cell phones, laptops, camera, video games",
+        "model_answer": "collage, electronic devices, cell phones, laptops, cameras, person"
+    },
+    {
+        "question_type": "adversarial",
+        "question_topic": "outdoor",
+        "image_id": "10",
+        "image_src": "",
+        "question": "Describe the image",
+        "gt_answer": "tree, pink flowers, house, car",
+        "model_answer": "tree, pink flowers, house, truck"
+    }
+]
