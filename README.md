@@ -33,13 +33,11 @@ To fine-tune the LLaVA model:
 
 Clone the repository:
 
-bash
-Copy code
+
 git clone https://github.com/Varun-Chowdary/Independent_Study.git
 Navigate to the llava-finetune directory and run the script to start fine-tuning the model:
 
-bash
-Copy code
+
 cd llava-finetune_latest
 python finetune.py
 Use the respective tools from the Aloha, MMHal, and GroundingDINO folders to evaluate the fine-tuned model’s performance.
