@@ -7,9 +7,13 @@
 This independent study explores the fine-tuning of the LLaVA 1.5 Multimodal Large Language Model (MLLM) using the OK-VQA dataset, focusing on enhancing object detection and minimizing hallucinations. LLaVA 1.5 integrates visual and linguistic processing, making it suitable for tasks like visual question answering and image captioning. The model is fine-tuned on 9,100 training samples and tested on 5,050 samples, with an additional 250 zero-shot images to evaluate performance. Three specialized tools—ALOHa, MMHal-Bench, and GroundingDINO—were used to test and evaluate hallucinations in the model's object detection capabilities. The results show a significant improvement in detection accuracy and a reduction in hallucinations.
 
 ALOHa: Average score of 0.886, highlighting precise object detection.
+
 MMHal-Bench: Hallucination score of 4.428, indicating improved accuracy.
+
 GroundingDINO: Hallucinations in only 4% of the responses, demonstrating the model's reliability.
-Folders and Structure
+
+
+### Folders and Structure
 llava-finetune_latest
 Contains the script to fine-tune the LLaVA-1.5 model. This script is specifically designed to improve the model's object detection accuracy and reduce hallucinations in its outputs.
 
