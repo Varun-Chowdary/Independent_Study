@@ -6,11 +6,11 @@ Refer to main.py for the code.
 ## Setup:
 
 Install ALOHa and dependencies.
-'''
+'''python
 pip install git+https://github.com/DavidMChan/aloha.git
 pip install -U spacy
 python -m spacy download en_core_web_lg
-'''
+
 
 Usage:
 To compute the ALOHa score, execute the following command:
@@ -19,6 +19,7 @@ python main.py
 
 main.py
 
+'''python
 from src.aloha.metrics import ALOHa
 from src.aloha.object_parser import GPT35TurboObjectParser
 from src.aloha.string_similarity import MPNetSimilarity
