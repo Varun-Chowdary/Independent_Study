@@ -6,7 +6,7 @@ Getting Started
 You can implement GroundingDINO in two ways:
 
 1. Using the Official GitHub Repository
-To set up GroundingDINO locally, you can clone and install the repository from GroundingDINO (https://github.com/DavidMChan/aloha):
+To set up GroundingDINO locally, you can clone and install the repository from GroundingDINO (https://github.com/IDEA-Research/GroundingDINO):
 
 # Clone the GroundingDINO repository
 git clone https://github.com/IDEA-Research/GroundingDINO.git
@@ -17,6 +17,7 @@ pip install -r requirements.txt
 
 2. Using HuggingFace Space
 Alternatively, you can use the GroundingDINO demo on HuggingFace. This method does not require any setup, and you can test the model directly in the browser.
+https://huggingface.co/spaces/merve/Grounding_DINO_demo
 
 Upload your image
 Specify the object(s) you want to detect (e.g., "cat," "dog," "tree")
