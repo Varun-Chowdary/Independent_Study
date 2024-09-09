@@ -4,6 +4,8 @@ import json
 import time
 import re
 
+# Template for the GPT-4 evaluation
+# This prompts GPT-4 to evaluate the LMM responses based on examples and specific evaluation criteria for hallucination
 template = '''Please act as an impartial and objective judge and evaluate the quality of the response provided by a Large Multimodal Model (LMM) to the user question. Your evaluation should be mainly based on whether the response is informative, and whether the response contains any hallucination. Hallucination, in this context, refers to a situation where the LMM generates a response that includes information not present or implied in the image or previous conversation. A hallucination could be a false claim about an object, action, emotion, or any other detail that is not grounded in the image.
 
 For clarity, consider these examples:
@@ -75,61 +77,92 @@ To evaluate the LMM responses, first, begin your evaluation by providing a short
 '''
 
 if __name__ == '__main__':
+    # Initialize argument parser for command-line input
     parser = argparse.ArgumentParser()
-    parser.add_argument('--response', type=str, default='responses/idefics_80b.json', help='response file containing images, questions, and model responses')
-    parser.add_argument('--evaluation', type=str, default=None, help='GPT-4 evaluation results to be saved')
+
+    # Argument to specify the JSON file containing responses from the LMM to evaluate
+    parser.add_argument('--response', type=str, default='responses/idefics_80b.json', 
+                        help='Response file containing images, questions, and model responses.')
+
+    # Argument to specify where to save the evaluation results
+    parser.add_argument('--evaluation', type=str, default=None, 
+                        help='Path where GPT-4 evaluation results will be saved.')
+
+    # Argument to input OpenAI API key (required)
     parser.add_argument('--api-key', type=str, required=True)
+
+    # Argument to specify which GPT model to use, default is GPT-4
     parser.add_argument('--gpt-model', type=str, default='gpt-4')
+
+    # Parse the arguments from the command line
     args = parser.parse_args()
 
+    # Set OpenAI API key for authentication
     openai.api_key = args.api_key
 
-    # Load json file
+    # Load the JSON response file, which contains image contents, questions, and LMM responses
     with open(args.response, 'r') as f:
         records = json.load(f)
 
-    # Dynamically determine the length of records
+    # Determine the number of records (i.e., LMM responses) to evaluate
     num_records = len(records)
 
-    # Ask GPT-4 to evaluate
+    # Initialize an empty list to store GPT-4 evaluations
     responses = []
+
+    # Iterate over each record in the response file and process it
     for i, record in enumerate(records):
+        # Format the image content as a comma-separated string for GPT-4 input
         image_content = ', '.join(record['image_content'])
+
+        # Format the input text using the evaluation template and record data (image content, question, and responses)
         input_text = template.format(image_content, record['question'], record['gt_answer'], record['model_answer'])
 
+        # Initialize the response variable
         response = None
+        
+        # Attempt to get GPT-4's evaluation response; retry on failure
         while response is None:
             try:
                 response = openai.ChatCompletion.create(
-                    model=args.gpt_model,
-                    messages=[
-                        {"role": "user", "content": input_text}
-                    ],
-                    temperature=0.0,
+                    model=args.gpt_model,  # Use GPT-4 model by default
+                    messages=[{"role": "user", "content": input_text}],  # Send the input formatted message to GPT-4
+                    temperature=0.0,  # Set to 0 for deterministic responses
                 )
             except Exception as e:
+                # Handle any exceptions (such as network errors) and retry after a delay
                 print(e)
                 print('retrying...')
-                time.sleep(10)
+                time.sleep(10)  # Wait before retrying
                 continue
 
+        # Output the GPT-4 evaluation content for progress tracking
         print(i, response['choices'][0]['message']['content'], flush=True)
+
+        # Append the evaluation response to the list of responses
         responses.append(response)
+
+        # Delay between requests to avoid overwhelming the API
         time.sleep(1)
 
-    # Save responses
+    # If the evaluation file path is specified, save the GPT-4 evaluation results to that file
     if args.evaluation is not None:
         with open(args.evaluation, 'w') as f:
             json.dump(responses, f, indent=2)
 
-    # Analyze responses
+    # Analyze the GPT-4 responses to extract the rating scores
     scores = []
     for i, response in enumerate(responses):
+        # Extract the content of the GPT-4 response
         response_text = response['choices'][0]['message']['content']
+
+        # Search for rating scores (0 to 6) within the response content
         scores_found = []
         for s in range(7):
             if re.search(rf'rating:\s*{s}', response_text, re.IGNORECASE):
                 scores_found.append(s)
+
+        # Append the found score or default to 0 if multiple or no scores found
         if len(scores_found) == 1:
             scores.append(scores_found[0])
         else:
@@ -137,13 +170,15 @@ if __name__ == '__main__':
             print(i, response_text)
             scores.append(0)
 
+    # Determine whether the LMM hallucinated based on the extracted scores
     hallucination = []
     for s in scores:
+        # If the score is less than 3, it is considered a hallucination
         if s >= 3:
-            hallucination.append(0)
+            hallucination.append(0)  # No hallucination
         else:
-            hallucination.append(1)
+            hallucination.append(1)  # Hallucination occurred
 
-    # Output results
+    # Print out the average score and the hallucination rate based on the evaluations
     print('Average score: {:.2f}'.format(sum(scores) / len(scores)))
     print('Hallucination rate: {:.2f}'.format(sum(hallucination) / len(hallucination)))
