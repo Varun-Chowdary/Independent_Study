@@ -5,7 +5,7 @@ Refer to main.py for the code.
 
 ## Setup:
 
-Install ALOHa and dependencies
+Install ALOHa and dependencies.
 
 pip install git+https://github.com/DavidMChan/aloha.git
 pip install -U spacy
