@@ -73,8 +73,9 @@ To evaluate the LMM responses, first, begin your evaluation by providing a short
 {}
 
 ### LMM Response to Evaluate
-{}= '''
+{}= 
 '''
+
 
 if __name__ == '__main__':
     # Initialize argument parser for command-line input
