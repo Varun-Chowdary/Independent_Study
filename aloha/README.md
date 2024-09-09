@@ -36,7 +36,7 @@ evaluator = ALOHa(
 candidate_caption = "bridge, river, water"
 reference_captions = ["river, bridge, water, man, woman"]
 
-# Compute the ALOHa score
+#Compute the ALOHa score
 score, _ = evaluator(target=candidate_caption, references=reference_captions)
 print(score)
 
