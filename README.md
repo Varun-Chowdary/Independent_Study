@@ -40,8 +40,8 @@ git clone https://github.com/Varun-Chowdary/Independent_Study.git
 Navigate to the llava-finetune file and run the script to start fine-tuning the model:
 
 
-cd llava-finetune_latest
-python finetune.py
+cd llava-finetune_brev_latest.ipynb
+Run all the cells
 
 Use the respective tools from the Aloha, MMHal, and GroundingDINO folders to evaluate the fine-tuned model’s performance.
 
